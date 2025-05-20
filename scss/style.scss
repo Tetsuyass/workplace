@@ -7,3 +7,20 @@
 @import "plugin_seal";
 @import "off_topic";
 @import "index";
+@import "responsive";
+@import "svg_backgroundtitle";
+@import "animated_keyframes";
+
+/* Style de base du body */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial,sans-serif;
+}

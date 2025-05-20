@@ -1,0 +1,9 @@
+.workplace-identity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;  /* A ajuster */
+  height: auto;
+  z-index: 10; /* On s'assure que l'image est toujours au-dessus du fond */
+}

@@ -1,3 +1,52 @@
 /* Includes */
+.workplace-identity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* A ajuster */
+  height: auto;
+  z-index: 10; /* On s'assure que l'image est toujours au-dessus du fond */
+}
+
+.home-title {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-index-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: backgroundMove 15s infinite linear;
+}
+
+@keyframes backgroundMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Style de base du body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
 
 /*# sourceMappingURL=style.css.map */
