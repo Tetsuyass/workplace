@@ -7,6 +7,7 @@
   width: 300px; /* A ajuster */
   height: auto;
   z-index: 10; /* On s'assure que l'image est toujours au-dessus du fond */
+  mix-blend-mode: multiply;
 }
 
 .home-title {
@@ -22,20 +23,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  animation: backgroundMove 15s infinite linear;
 }
 
-@keyframes backgroundMove {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 /* Style de base du body */
 * {
   margin: 0;
@@ -45,8 +34,16 @@
 
 body, html {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #1b263b;
+  position: relative;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=style.css.map */
