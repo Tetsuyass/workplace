@@ -1,14 +1,35 @@
-@charset "UTF-8";
 /* Includes */
 .workplace-identity {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px; /* A ajuster */
+  width: 400px;
   height: auto;
-  z-index: 1; /* Assure-toi que l'image est sous le titre */
-  transition: transform 0.1s ease-in-out; /* Légère transition au scroll */
+  will-change: transform;
+  transition: transform 0.05s ease-out;
+}
+
+.identity-wrap {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.credentials-image {
+  position: absolute;
+  bottom: 35%;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+}
+
+#credential {
+  font-style: italic;
+  color: #666;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
 }
 
 .home-title {
@@ -23,9 +44,13 @@
 }
 
 .background-index-title {
-  position: sticky;
-  top: 20%;
-  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* Style de base du body */

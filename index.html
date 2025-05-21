@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Tetsuya">
     <!--SASS compil-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
-    <script type="text/javascript" src="js/index.js" async></script>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <!--<script type="text/javascript" src="js/index.js" async></script>-->
 
     <title>Tetsuya's Workplace</title>
 </head>
@@ -30,29 +29,28 @@
                 </div>
             </nav>
         </header>
-
         <div class="home-title">
             <svg class="background-index-title" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 500 100"
-                 width="100%" height="100%">
+                 viewBox="0 0 1000 400"
+                 width="100%" height="400px">
                 <defs>
                     <style>
                         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
                         .fancy-text {
                             font-family: 'Dancing Script', cursive;
-                            font-size: 65px;
+                            font-size: 180px;
                             fill: #333;
                             dominant-baseline: middle;
                             text-anchor: middle;
                         }
                     </style>
                 </defs>
-                <text x="250" y="50" class="fancy-text">𝓣𝓮𝓽𝓼𝓾𝔂𝓪</text>
+                <text x="500" y="200" class="fancy-text">𝓣𝓮𝓽𝓼𝓾𝔂𝓪</text>
             </svg>
             <div class="credentials-image">
                 <p id="credential">Source: Ado x JR collaboration illustrations</p>
             </div>
-            <div class="identity-wrap" style="tranlate: none; rotate:none; scale:none; transform: translate(0px,0px)">
+            <div class="identity-wrap">
                 <img src="images/ado-identity.png" alt="Ado my love" class="workplace-identity">
             </div>
         </div>
@@ -91,5 +89,35 @@
             </div>
         </div>
     </footer>
+    <script>
+        function handleParallax() {
+            const image = document.querySelector('.workplace-identity');
+            const title = document.querySelector('.background-index-title');
+
+            if (!image || !title) return;
+
+            let scrollPosition = window.pageYOffset;
+
+            // Effet de parallaxe pour l'image (mouvement vers le bas)
+            const imageTranslateY = scrollPosition * 0.9;
+            image.style.transform = `translateY(${imageTranslateY}px)`;
+
+            // Effet de parallaxe pour le titre (mouvement plus lent)
+            const titleTranslateY = scrollPosition * 0.7;
+            title.style.transform = `translate(-50%, -50%) translateY(${titleTranslateY}px)`;
+        }
+
+        // Initialiser l'effet de parallaxe
+        document.addEventListener('DOMContentLoaded', function() {
+            // Appliquer l'effet au chargement initial
+            handleParallax();
+
+            // Appliquer l'effet lors du défilement
+            window.addEventListener('scroll', handleParallax);
+
+            // Appliquer l'effet lors du redimensionnement de la fenêtre
+            window.addEventListener('resize', handleParallax);
+        });
+    </script>
 </body>
 </html>

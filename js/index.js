@@ -1,3 +1,4 @@
+
 //// //// //// SLIDER //// //// ////
 
 //constantes :
@@ -15,7 +16,7 @@ let interval; //temps entre chaque défilement
 function showSlide(index) {
     //maj de la position des slides (c'est facile vous allez voir)
     const offset = -index * 100; //on prend le pourcentage de la largeur du conteneur des slides pour déplacer (une slide = 100%)
-    document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
+    document.querySelector("#slider").style.transform = `translateX(${offset}%)`;
     //maj du bouton qui correspond à la slide courante
     navButtons.forEach((button,i) => {
         button.classList.toggle("active",i===index);
@@ -59,12 +60,34 @@ function startAutoSlide() {
 //on démarre le slider
 startAutoSlide();
 showSlide(currentIndex); //affiche la première slide
-
 //// //// //// ADD EVNT LISTENER POUR LE SCROLL DOWN //// //// ////
-window.addEventListener('scroll', function () {
+// Fonction pour l'effet de parallaxe au scroll
+function handleParallax() {
     const image = document.querySelector('.workplace-identity');
-    const scrollPosition = window.scrollY; //ordonnée actuelle du scroll
-    //on ajuste la position de l'image en conséquence
-    const translateValue = scrollPosition *0.3 //a modifier au besoin
-    image.style.transform = `translateX(-50%) translateY(${translateValue}px)`;
-})
+    const title = document.querySelector('.background-index-title');
+
+    if (!image || !title) return;
+
+    let scrollPosition = window.pageYOffset;
+
+    // Effet de parallaxe pour l'image (mouvement vers le bas)
+    const imageTranslateY = scrollPosition * 0.2;
+    image.style.transform = `translateY(${imageTranslateY}px)`;
+
+    // Effet de parallaxe pour le titre (mouvement plus lent)
+    const titleTranslateY = scrollPosition * 0.1;
+    title.style.transform = `translate(-50%, -50%) translateY(${titleTranslateY}px)`;
+}
+
+// Initialiser l'effet de parallaxe
+document.addEventListener('DOMContentLoaded', function() {
+    // Appliquer l'effet au chargement initial
+    handleParallax();
+
+    // Appliquer l'effet lors du défilement
+    window.addEventListener('scroll', handleParallax);
+
+    // Appliquer l'effet lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', handleParallax);
+});
+
