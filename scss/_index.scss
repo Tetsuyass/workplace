@@ -1,10 +1,10 @@
 .workplace-identity {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;  /* A ajuster */
+  transform: translateX(-50%);
+  width: 300px; /* A ajuster */
   height: auto;
-  z-index: 10; /* On s'assure que l'image est toujours au-dessus du fond */
-  mix-blend-mode: multiply;
+  z-index: 1; /* Assure-toi que l'image est sous le titre */
+  transition: transform 0.1s ease-in-out; /* Légère transition au scroll */
 }

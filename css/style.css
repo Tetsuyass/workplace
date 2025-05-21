@@ -1,13 +1,14 @@
+@charset "UTF-8";
 /* Includes */
 .workplace-identity {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 300px; /* A ajuster */
   height: auto;
-  z-index: 10; /* On s'assure que l'image est toujours au-dessus du fond */
-  mix-blend-mode: multiply;
+  z-index: 1; /* Assure-toi que l'image est sous le titre */
+  transition: transform 0.1s ease-in-out; /* Légère transition au scroll */
 }
 
 .home-title {
@@ -15,14 +16,16 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .background-index-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: sticky;
+  top: 20%;
+  z-index: 5;
 }
 
 /* Style de base du body */

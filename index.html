@@ -13,23 +13,24 @@
     <title>Tetsuya's Workplace</title>
 </head>
 <body>
-    <header>
-        <nav class="nav-container">
-            <div class="home-logo-container">
-                <!--<a href="index.html" id="home-logo"><img src="images/logo.jpg" alt="Logo Home"></a>-->
-            </div>
-            <div class="links-container">
-                <ul id="links">
-                    <li class="link"><a href="html/about_me.html">About Me</a></li>
-                    <li class="link"><a href="html/plugin_home.html">Plugins Homepage</a></li>
-                    <li class="link"><a href="html/help_center.html">Help Center</a></li>
-                    <li class="link"><a href="html/off_topic.html">Off Topic</a></li>
-                    <li class="link"><a href="html/contacts.html">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="wrap">
+    <main class="wrap">
+        <header>
+            <nav class="nav-container">
+                <div class="home-logo-container">
+                    <a href="index.html" id="home-logo"><img src="images/logo.jpg" alt="Logo Home"></a>
+                </div>
+                <div class="links-container">
+                    <ul id="links">
+                        <li class="link"><a href="html/about_me.html">About Me</a></li>
+                        <li class="link"><a href="html/plugin_home.html">Plugins Homepage</a></li>
+                        <li class="link"><a href="html/help_center.html">Help Center</a></li>
+                        <li class="link"><a href="html/off_topic.html">Off Topic</a></li>
+                        <li class="link"><a href="html/contacts.html">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
         <div class="home-title">
             <svg class="background-index-title" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 500 100"
@@ -48,7 +49,12 @@
                 </defs>
                 <text x="250" y="50" class="fancy-text">𝓣𝓮𝓽𝓼𝓾𝔂𝓪</text>
             </svg>
-            <img src="images/ado-identity.png" alt="Ado my love" class="workplace-identity">
+            <div class="credentials-image">
+                <p id="credential">Source: Ado x JR collaboration illustrations</p>
+            </div>
+            <div class="identity-wrap" style="tranlate: none; rotate:none; scale:none; transform: translate(0px,0px)">
+                <img src="images/ado-identity.png" alt="Ado my love" class="workplace-identity">
+            </div>
         </div>
         <article id="slider-container">
             <div id="slider">
@@ -66,7 +72,7 @@
                 <button class="nav-button" onclick="goToSlide(4)"> </button>
             </div>
         </article>
-    </div>
+    </main>
     <footer class="footer">
         <div class="footer-container">
             <div class="socials-container">

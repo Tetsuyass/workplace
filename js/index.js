@@ -59,3 +59,12 @@ function startAutoSlide() {
 //on démarre le slider
 startAutoSlide();
 showSlide(currentIndex); //affiche la première slide
+
+//// //// //// ADD EVNT LISTENER POUR LE SCROLL DOWN //// //// ////
+window.addEventListener('scroll', function () {
+    const image = document.querySelector('.workplace-identity');
+    const scrollPosition = window.scrollY; //ordonnée actuelle du scroll
+    //on ajuste la position de l'image en conséquence
+    const translateValue = scrollPosition *0.3 //a modifier au besoin
+    image.style.transform = `translateX(-50%) translateY(${translateValue}px)`;
+})
