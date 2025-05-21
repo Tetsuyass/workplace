@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Tetsuya">
-    <!--SASS compil-->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
-    <script src="js/parallax.js" async></script>
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <!-- Locomotive Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
     <title>Tetsuya's Workplace</title>
 </head>
 <body>
-    <main class="wrap">
+    <main class="wrap" data-scroll-container data-scroll-section>
         <header>
             <nav class="nav-container">
                 <div class="home-logo-container">
@@ -30,11 +32,11 @@
             </nav>
         </header>
         <div class="home-title" id="home-title">
-            <h1 class="title" id="parallax-title">Tetsuya</h1>
+            <h1 class="title" id="parallax-title" data-scroll data-scroll-speed="-2">Tetsuya</h1>
             <div class="identity-wrap">
-                <img src="images/ado-identity.png" alt="Ado my love" class="workplace-identity" id="workplace-identity">
+                <img src="images/ado-identity.png" alt="Ado my love" class="workplace-identity" id="workplace-identity" data-scroll data-scroll-speed="1.5">
             </div>
-            <p class="credit" id="credential-txt">Source: Ado x JR collaboration illustrations</p>
+            <p class="credit" id="credential-txt" data-scroll data-scroll-speed="1">Source: Ado x JR collaboration illustrations (modified with AI)</p>
         </div>
         <article id="slider-container">
             <div id="slider">
@@ -52,7 +54,7 @@
                 <button class="nav-button" onclick="goToSlide(4)"> </button>
             </div>
         </article>
-    </main>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="socials-container">
@@ -71,5 +73,11 @@
             </div>
         </div>
     </footer>
+    </main>
+    <!-- GSAP et ScrollTrigger pour l'effet de parallaxe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 </html>

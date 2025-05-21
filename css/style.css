@@ -25,6 +25,14 @@ body, html {
     color: var(--text-color);
 }
 
+[data-scroll-container]::-webkit-scrollbar {
+    display: none;
+}
+[data-scroll-container] {
+    scrollbar-width: none;
+    will-change: transform;
+}
+
 /* Navigation */
 .nav-container {
     display: flex;
@@ -63,7 +71,7 @@ body, html {
     color: var(--accent-color);
 }
 
-/* Section titre avec parallaxe */
+/* Section titre avec parallaxe - optimisé pour GSAP */
 .home-title {
     position: relative;
     height: 100vh;
@@ -72,32 +80,32 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: var(--background-color);
+    background-color: #33486f;
     border-bottom: 1px solid var(--border-color);
 }
 
 .title {
     position: absolute;
-    font-size: 650px;
+    font-size: 480px;
     font-weight: bold;
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
     z-index: 1;
     font-family: 'Brush Script MT', cursive;
-    top: 40%;
+    top: 10%;
     transform: translateY(-50%);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .identity-wrap {
     position: absolute;
-    top: 50%;
-    transform: translateY(-30%); /* Superposition partielle sur le titre */
+    top: 40%;
+    transform: translateY(-30%);
     z-index: 2;
 }
 
 .workplace-identity {
-    width: 580px;
+    width: 480px;
     height: auto;
     display: block;
 }
@@ -108,9 +116,9 @@ body, html {
     text-align: center;
     font-style: italic;
     color: var(--text-color);
-    opacity: 0.7;
+    opacity: 1;
     z-index: 3;
-    background-color: rgba(13, 27, 42, 0.7); /* Semi-transparent background */
+    background-color: rgba(13, 27, 42, 0.7);
     padding: 5px 10px;
     border-radius: 4px;
 }
@@ -119,6 +127,7 @@ body, html {
 #slider-container {
     position: relative;
     width: 100%;
+    min-height: 600px;
     overflow: hidden;
     padding: 50px 0;
     background-color: var(--primary-color);
