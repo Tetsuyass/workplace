@@ -78,7 +78,7 @@
             Image Placeholder
         </div>
     </div>
-    <p class="credit">Source: Ado x JR collaboration illustrations</p>
+    <p class="credit" id="credential-txt">Source: Ado x JR collaboration illustrations</p>
 </div>
 
 <div class="content">
@@ -90,9 +90,10 @@
     // Fonction pour appliquer l'effet de parallaxe
     function applyParallax() {
         // Éléments à animer
-        const title = document.getElementById('parallax-title');
+        const title = document.getElementById('');
         const image = document.getElementById('parallax-image');
-        const section = document.getElementById('parallax');
+        const section = document.getElementById('home-title');
+        const credits = document.getElementById('credential-txt')
 
         // Vérifier si les éléments existent
         if (!title || !image || !section) {
@@ -114,10 +115,13 @@
                 scrollTop <= sectionTop + section.offsetHeight) {
 
                 // Déplacer le titre vers le haut (plus lentement)
-                title.style.transform = `translateY(${relativeScroll * 0.2}px)`;
+                title.style.transform = `translateY(${-relativeScroll * 0.2}px)`;
 
-                // Déplacer l'image vers le bas (plus rapidement)
-                image.style.transform = `translateY(${relativeScroll * 0.5}px)`;
+                // Déplacer l'image vers le haut (plus rapidement)
+                image.style.transform = `translateY(${-relativeScroll * 0.4}px)`;
+
+                //déplacer les crédits avec l'image
+                credits.style.transform = `translateY(${-relativeScroll * 0.4}px)`;
 
                 console.log("Effet appliqué - Scroll:", scrollTop, "Title:", relativeScroll * 0.2, "Image:", relativeScroll * 0.5);
             }
