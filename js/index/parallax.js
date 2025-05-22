@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             el: scrollContainer,
             smooth: true,
             multiplier: 1,
-            lerp: 0.06,  // Valeur plus basse pour un défilement plus fluide
+            lerp: 0.06,
             smartphone: {
                 smooth: true,
                 multiplier: 0.8
@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // Mettre à jour ScrollTrigger quand le défilement se produit
         locoScroll.on("scroll", ScrollTrigger.update);
 
-        // Définir les animations avec des paramètres optimisés
+        // Définir les animations
         const animations = [
             {
                 element: "#parallax-title",
-                properties: { y: -400, opacity: 1 }
+                properties: { y: -100, opacity: 1 }
             },
             {
                 element: "#workplace-identity",
@@ -64,38 +64,48 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 element: "#credential-txt",
-                properties: { y: -650, opacity: 0 }
+                properties: { y: -300, opacity: 0 }
             }
         ];
 
+        // Appliquer les animations avec des paramètres optimisés
         animations.forEach(animation => {
             if (document.querySelector(animation.element)) {
-                gsap.to(animation.element, {
-                    y: animation.properties.y,
-                    scrollTrigger: {
-                        trigger: ".home-title",
-                        scroller: scrollContainer,
-                        start: "top top",
-                        end: "bottom top",
-                        scrub: true,
-                        invalidateOnRefresh: true
+                gsap.fromTo(
+                    animation.element,
+                    { y: 0 }, // État initial
+                    {
+                        y: animation.properties.y,
+                        scrollTrigger: {
+                            trigger: ".home-title",
+                            scroller: scrollContainer,
+                            start: "top top",
+                            end: "bottom top",
+                            scrub: 0.8, // Valeur ajustée pour une animation plus fluide
+                            invalidateOnRefresh: false,
+                            // Pas de onLeaveBack pour permettre à l'animation de se terminer naturellement
+                        }
                     }
-                });
+                );
             }
         });
 
         // Animation d'opacité commune
-        gsap.to(animations.map(a => a.element), {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: ".home-title",
-                scroller: scrollContainer,
-                start: "top top",
-                end: "center top",
-                scrub: true,
-                invalidateOnRefresh: true
+        gsap.fromTo(
+            animations.map(a => a.element),
+            { opacity: 1 }, // État initial
+            {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".home-title",
+                    scroller: scrollContainer,
+                    start: "top top",
+                    end: "center top",
+                    scrub: 0.8,
+                    invalidateOnRefresh: false
+                }
             }
-        });
+        );
 
         // Gérer le redimensionnement de la fenêtre
         window.addEventListener('resize', debounce(function() {
@@ -105,7 +115,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Rafraîchir ScrollTrigger après l'initialisation
         ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-        ScrollTrigger.refresh();
+
+        // Utiliser un délai pour s'assurer que tout est bien initialisé
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 100);
     }
 
     // Fonction utilitaire pour limiter les appels lors du redimensionnement

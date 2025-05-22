@@ -1,6 +1,6 @@
 /* Style de base avec la palette de couleurs */
 :root {
-    --primary-color: #0d1b2a;
+    --primary-color: #4b6aa3;
     --secondary-color: #1b263b;
     --accent-color: #468faf;
     --text-color: #e6e6e6;
@@ -9,6 +9,7 @@
     --hover-color: #102841;
     --button-bg: #1b263b;
     --button-hover-bg: #0d1b2a;
+    --div-background-color: #6884b9;
 }
 
 * {
@@ -80,13 +81,12 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #33486f;
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--div-background-color);
 }
 
 .title {
     position: absolute;
-    font-size: 480px;
+    font-size: 670px;
     font-weight: bold;
     color: var(--secondary-color);
     text-align: center;
@@ -94,7 +94,7 @@ body, html {
     font-family: 'Brush Script MT', cursive;
     top: 10%;
     transform: translateY(-50%);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
 }
 
 .identity-wrap {
@@ -112,6 +112,7 @@ body, html {
 
 .credit {
     position: absolute;
+    font-size: 10px;
     bottom: 20px;
     text-align: center;
     font-style: italic;
@@ -123,6 +124,106 @@ body, html {
     border-radius: 4px;
 }
 
+/* About */
+.about-container {
+    position: relative;
+    padding: 2rem; /* auto n'est pas valide ici */
+    margin: auto;
+    min-height: 10vh; /* height trop petit pour du texte, mieux vaut min-height */
+    display: flex; /* utile pour centrer */
+    justify-content: center;
+    align-items: center; /* pour centrer verticalement */
+    background-color: var(--div-background-color);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about {
+    max-width: 800px; /* pour un bloc de texte lisible */
+    width: 100%;
+    hyphens: auto; /* active la césure */
+}
+
+.about-text {
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 3px 3px #0a0a0a;
+    line-height: 1.6; /* améliore la lisibilité */
+    font-size: 1.2rem;
+}
+
+
+/* FAQ */
+
+#small-hc-container {
+    background-color: var(--div-background-color);
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+#small-hc {
+    max-width: 1100px;
+    width: 100%;
+}
+
+#small-hc-faq-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px #0a0a0a;
+}
+
+#small-hc-faq {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.small-hc-faq-item {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-hc-faq-item:hover {
+    background-color: var(--hover-color);
+}
+
+.small-hc-faq-item-title {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.small-hc-faq-item-answer {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.small-hc-faq-item.open .small-hc-faq-item-answer {
+    max-height: 300px; /* suffisamment grand pour les réponses */
+    opacity: 1;
+    margin-top: 0.5rem;
+}
+
+
 /* Slider */
 #slider-container {
     position: relative;
@@ -130,7 +231,7 @@ body, html {
     min-height: 600px;
     overflow: hidden;
     padding: 50px 0;
-    background-color: var(--primary-color);
+    background-color: var(--div-background-color);
 }
 
 #slider {
@@ -177,11 +278,53 @@ body, html {
     background-color: var(--hover-color);
 }
 
+#what-next-container {
+    background-color: var(--div-background-color);
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#what-next {
+    max-width: 800px;
+    width: 100%;
+    color: var(--text-color);
+}
+
+#what-next-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Brush Script MT', cursive;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px #0a0a0a;
+}
+
+#what-next p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: Arial, sans-serif;
+}
+
+#what-next-image-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border: 2px dashed var(--border-color);
+    border-radius: 10px;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
 /* Footer */
 .footer {
     width: 100%;
     padding: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--text-color);
     position: relative;
     z-index: 100;

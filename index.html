@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Tetsuya">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <!-- Locomotive Scroll -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
     <title>Tetsuya's Workplace</title>
@@ -18,7 +18,7 @@
         <header>
             <nav class="nav-container">
                 <div class="home-logo-container">
-                    <a href="index.html" id="home-logo"><img src="images/logo.jpg" alt="Logo Home"></a>
+                    <a href="index.html" id="home-logo"><img src="assets/images/logo.jpg" alt="Logo Home"></a>
                 </div>
                 <div class="links-container">
                     <ul id="links">
@@ -34,17 +34,25 @@
         <div class="home-title" id="home-title">
             <h1 class="title" id="parallax-title" data-scroll data-scroll-speed="-2">Tetsuya</h1>
             <div class="identity-wrap">
-                <img src="images/ado-identity.png" alt="Ado my love" class="workplace-identity" id="workplace-identity" data-scroll data-scroll-speed="1.5">
+                <img src="assets/images/ado-identity.png" alt="Ado my love" class="workplace-identity" id="workplace-identity" data-scroll data-scroll-speed="1.5">
             </div>
             <p class="credit" id="credential-txt" data-scroll data-scroll-speed="1">Source: Ado x JR collaboration illustrations (modified with AI)</p>
         </div>
+        <div class="about-container" id="about-container">
+            <div class="about" id="about">
+                <p class="about-text" id="about-text">
+                    I'm a freelance Web Developer who mostly works on <strong class="str">WordPress's plugins</strong> and <strong class="str">Website Making</strong>. I always like to learn
+                    new things like new languages and I really like to stay informed of the latest news about AI ! Also, I'm a huge fan of Ado (私が一番好きな音楽はレディメイドです。). I gladly welcome you to my home site and I hope you will enjoy your time here !
+                </p>
+            </div>
+        </div>
         <article id="slider-container">
             <div id="slider">
-                <div class="slide" id="slide1"><img src="#" alt="Slide 1"></div>
-                <div class="slide" id="slide2"><img src="#" alt="Slide 2"></div>
-                <div class="slide" id="slide3"><img src="#" alt="Slide 3"></div>
-                <div class="slide" id="slide4"><img src="#" alt="Slide 4"></div>
-                <div class="slide" id="slide5"><img src="#" alt="Slide 5"></div>
+                <div class="slide" id="slide1"><img src="assets/images/slide_1_pro.avif" alt="Slide 1"></div>
+                <div class="slide" id="slide2"><img src="assets/images/slide_2_pro.avif" alt="Slide 2"></div>
+                <div class="slide" id="slide3"><img src="assets/images/slide_3_pro.avif" alt="Slide 3"></div>
+                <div class="slide" id="slide4"><img src="assets/images/slide_4_pro.avif" alt="Slide 4"></div>
+                <div class="slide" id="slide5"><img src="assets/images/slide_5_pro.avif" alt="Slide 5"></div>
             </div>
             <div class="navigation">
                 <button class="nav-button" onclick="goToSlide(0)"> </button>
@@ -54,14 +62,38 @@
                 <button class="nav-button" onclick="goToSlide(4)"> </button>
             </div>
         </article>
-
+    <article id="small-hc-container">
+        <div id="small-hc">
+            <h2 id="small-hc-faq-title">FAQ</h2>
+            <ul id="small-hc-faq">
+                <li class="small-hc-faq-item">
+                    <h4 class="small-hc-faq-item-title">Where can I find help about a certain plugin ?</h4>
+                    <p class="small-hc-faq-item-answer">You can find documentation on the Plugins Homepage. If not, feel free to contact me!</p>
+                </li>
+                <li class="small-hc-faq-item">
+                    <h4 class="small-hc-faq-item-title">Do you offer support or updates?</h4>
+                    <p class="small-hc-faq-item-answer">Support is provided yes and I try to push updates regularly.</p>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <article id="what-next-container">
+        <div id="what-next">
+            <h2 id="what-next-title">What's next ?</h2>
+            <p>I'm open to suggestion if you want me to develop something in particular..</p>
+            <!--Image a changer plus tard-->
+            <div id="what-next-image-container">
+                Image Placeholder
+            </div>
+        </div>
+    </article>
     <footer class="footer">
         <div class="footer-container">
             <div class="socials-container">
                 <ul class="socials">
-                    <li class="social"><a href="#"><img src="#" alt="Discord Logo"></a></li>
-                    <li class="social"><a href="#"><img src="#" alt="Instagram Logo"></a></li>
-                    <li class="social"><a href="#"><img src="#" alt="Github Logo"></a></li>
+                    <li class="social" id="discord"><a href="#"><img src="assets/images/discord.svg" alt="Discord Logo"></a></li>
+                    <li class="social" id="insta"><a href="#"><img src="assets/images/instagram.svg" alt="Instagram Logo"></a></li>
+                    <li class="social" id="github"><a href="#"><img src="assets/images/github.svg" alt="Github Logo"></a></li>
                 </ul>
             </div>
             <div class="legals-container">
@@ -78,6 +110,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="js/parallax.js"></script>
+    <script src="js/index/parallax.js"></script>
+    <script src="js/index/slider.js" async></script>
+    <script src="js/index/faq.js" async></script>
 </body>
 </html>
