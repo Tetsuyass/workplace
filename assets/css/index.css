@@ -16,6 +16,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url('/assets/images/identity/curseur-perso.png') 0 0, auto;
+}
+
+input:hover,
+textarea:hover,
+button:hover,
+a:hover {
+    cursor: url('/assets/images/identity/curseur-perso-hover.png') 0 0, auto;
 }
 
 body, html {
@@ -57,18 +65,18 @@ body, html {
     list-style: none;
 }
 
-.link {
+.spa-link {
     margin-left: 20px;
 }
 
-.link a {
+.spa-link a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.link a:hover {
+.spa-link a:hover {
     color: var(--accent-color);
 }
 
@@ -193,18 +201,20 @@ body, html {
     padding: 1.5rem;
     border-left: 4px solid var(--accent-color);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    cursor: pointer;
+    cursor: url('/assets/images/identity/curseur-perso-hover.png') 0 0, auto;
     transition: background-color 0.3s ease;
 }
 
 .small-hc-faq-item:hover {
     background-color: var(--hover-color);
+    cursor: url('/assets/images/identity/curseur-perso-hover.png') 0 0, auto;
 }
 
 .small-hc-faq-item-title {
     font-size: 1.2rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
+    cursor: url('/assets/images/identity/curseur-perso-hover.png') 0 0, auto;
 }
 
 .small-hc-faq-item-answer {
@@ -215,6 +225,7 @@ body, html {
     overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.4s ease;
     opacity: 0;
+    cursor: url('/assets/images/identity/curseur-perso-hover.png') 0 0, auto;
 }
 
 .small-hc-faq-item.open .small-hc-faq-item-answer {
@@ -266,7 +277,7 @@ body, html {
     background-color: var(--secondary-color);
     border: none;
     margin: 0 5px;
-    cursor: pointer;
+    cursor: url('/assets/images/identity/curseur-perso-hover.png') 0 0, auto;
     transition: background-color 0.3s ease;
 }
 
@@ -392,7 +403,7 @@ body, html {
         justify-content: center;
     }
 
-    .link {
+    .spa-link {
         margin: 5px 10px;
     }
 }

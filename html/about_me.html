@@ -2,51 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Tetsuya">
-    <!--SASS compil-->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/images/logo.jpg">
+    <link rel="preload" href="/assets/images/identity/curseur-perso.png" as="image" />
+    <link rel="preload" href="/assets/images/identity/curseur-perso-hover.png" as="image" />
+    <link rel="stylesheet" href="../assets/css/about_me.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-    <title>Tetsuya's Workplace</title>
+    <title>Tetsuya's Workplace - About</title>
 </head>
 <body>
-<header>
-    <nav class="nav-container">
-        <div class="home-logo-container">
-            <a href="../index.html" id="home-logo"><img src="../assets/images/logo.jpg" alt="Logo Home"></a>
-        </div>
-        <div class="links-container">
-            <ul id="links">
-                <li class="link"><a href="about_me.html">About Me</a></li>
-                <li class="link"><a href="plugin_home.html">Plugins Homepage</a></li>
-                <li class="link"><a href="help_center.html">Help Center</a></li>
-                <li class="link"><a href="off_topic.html">Off Topic</a></li>
-                <li class="link"><a href="contacts.html">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<div class="wrap">
-
-</div>
-</body>
-<footer class="footer">
-    <div class="footer-container">
-        <div class="socials-container">
-            <ul class="socials">
-                <li class="social"><a href="#"><img src="#" alt="Discord Logo"></a></li>
-                <li class="social"><a href="#"><img src="#" alt="Instagram Logo"></a></li>
-                <li class="social"><a href="#"><img src="#" alt="Github Logo"></a></li>
-            </ul>
-        </div>
-        <div class="legals-container">
-        </div>
-        <div class="credentials-container">
-            <div class="credential">
-                &copy; Tetsuya's Workplace 2025. All rights reserved.
+<main class="wrap">
+    <header>
+        <nav class="nav-container">
+            <div class="home-logo-container">
+                <a href="../index.html" id="home-logo"><img src="../assets/images/identity/logo.jpg" alt="Logo Home"></a>
+            </div>
+            <div class="links-container">
+                <ul id="links">
+                    <li class="spa-link"><a href="plugin_home.html">Plugins</a></li>
+                    <li class="spa-link"><a href="help_center.html">Help</a></li>
+                    <li class="spa-link"><a href="off_topic.html">Off Topic</a></li>
+                    <li class="spa-link"><a href="contacts.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="title-container">
+        <div class="title-content">
+            <div class="title-section">
+                <h2>About Me</h2>
+            </div>
+            <div class="title-text-container">
+                <p class="title-text">
+                    Hi, I’m Tetsuya — a freelance WordPress developer, web enthusiast… and a huge J-pop fan! 🎧
+                </p>
+                <p class="title-text">
+                    Welcome to my little corner of the internet — part professional showcase for my WordPress plugins,
+                </p>
+                <p class="title-text">
+                    part personal blog where I share my love for the incredible Japanese singer Ado.
+                </p>
             </div>
         </div>
+        <div class="title-image-container">
+            <img src="../assets/images/identity/illustration-tetsuya.png" alt="Illustration de Tetsuya" class="title-image">
+        </div>
     </div>
-</footer>
+    <article class="article-container">
+        <div class="article">
+            <h3>On the professional side: handcrafted WordPress plugins</h3>
+            <p class="article-text">
+                I work solo, building WordPress plugins that are simple, efficient, and genuinely useful. My goal is to create tools that make life easier for WordPress users — whether you're a blogger, content creator, or small business owner.
+            </p>
+            <p class="article-text">
+                I focus on making plugins that are lightweight, reliable, and well-documented — carefully coded with real-world needs in mind. No bloated or overcomplicated features — just clean, purposeful functionality that does what it promises.
+            </p>
+            <p class="article-text">
+                I also offer custom development and tech support for those who need more tailored solutions. If you’d like to chat about a specific project or idea, feel free to reach out!
+            </p>
+        </div>
+    </article>
+    <article class="article-container">
+        <div class="article">
+            <h3>On the passion side: Ado, music and emotion</h3>
+            <p class="article-text">
+                When I’m not coding, there’s a good chance I’m listening to Ado. Her powerful voice, bold artistic choices, and the rich visual and emotional worlds she creates have fascinated me from the start.
+            </p>
+            <p class="article-text">
+                Here on the site, you’ll also find a blog dedicated entirely to her (Spoiler : In the Off Topic section) — a space where I share song reviews, commentary, updates on her latest releases, concerts, collaborations, and more !
+            </p>
+            <p class="article-text">
+                It’s my personal outlet — more casual, but written with heart. Whether you’re already a fan or just discovering her, I hope you enjoy the ride.
+            </p>
+            <p class="article-text">
+                Please note that this is purely personnal and in any case is NOT an official advertisement campaign. I'm just sharing my passion.
+            </p>
+        </div>
+    </article>
+    <div id="end-text-container">
+        <p id="end-text">
+            This site is a solo project — born from a double passion for open web technology and Japanese music.
+            Thanks for stopping by — whether you’re here to try out a plugin, read a blog post, or just explore.
+
+            See you around,
+            Tetsuya
+        </p>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="socials-container">
+                <ul class="socials">
+                    <li class="social" id="discord"><a href="#"><img src="../assets/images/socials/discord.svg" alt="Discord Logo"></a></li>
+                    <li class="social" id="insta"><a href="#"><img src="../assets/images/socials/instagram.svg" alt="Instagram Logo"></a></li>
+                    <li class="social" id="github"><a href="#"><img src="../assets/images/socials/github.svg" alt="Github Logo"></a></li>
+                </ul>
+            </div>
+            <div class="legals-container">
+            </div>
+            <div class="credentials-container">
+                <div class="credential">
+                    &copy; Tetsuya's Workplace 2025. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
 </html>

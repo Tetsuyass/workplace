@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Tetsuya">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="/assets/images/identity/curseur-perso.png" as="image" />
+    <link rel="preload" href="/assets/images/identity/curseur-perso-hover.png" as="image" />
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -14,19 +16,19 @@
     <title>Tetsuya's Workplace</title>
 </head>
 <body>
-    <main class="wrap" data-scroll-container data-scroll-section>
+    <main class="wrap" id="main-content" data-scroll-container data-scroll-section>
         <header>
             <nav class="nav-container">
                 <div class="home-logo-container">
-                    <a href="index.html" id="home-logo"><img src="assets/images/logo.jpg" alt="Logo Home"></a>
+                    <a href="index.html" id="home-logo"><img src="assets/images/identity/logo.jpg" alt="Logo Home"></a>
                 </div>
                 <div class="links-container">
                     <ul id="links">
-                        <li class="link"><a href="html/about_me.html">About Me</a></li>
-                        <li class="link"><a href="html/plugin_home.html">Plugins Homepage</a></li>
-                        <li class="link"><a href="html/help_center.html">Help Center</a></li>
-                        <li class="link"><a href="html/off_topic.html">Off Topic</a></li>
-                        <li class="link"><a href="html/contacts.html">Contact Me</a></li>
+                        <li class="spa-link"><a href="html/about_me.html">About</a></li>
+                        <li class="spa-link"><a href="html/plugin_home.html">Plugins</a></li>
+                        <li class="spa-link"><a href="html/help_center.html">Help</a></li>
+                        <li class="spa-link"><a href="html/off_topic.html">Off Topic</a></li>
+                        <li class="spa-link"><a href="html/contacts.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -34,7 +36,7 @@
         <div class="home-title" id="home-title">
             <h1 class="title" id="parallax-title" data-scroll data-scroll-speed="-2">Tetsuya</h1>
             <div class="identity-wrap">
-                <img src="assets/images/ado-identity.png" alt="Ado my love" class="workplace-identity" id="workplace-identity" data-scroll data-scroll-speed="1.5">
+                <img src="assets/images/identity/ado-identity.png" alt="Ado my love" class="workplace-identity" id="workplace-identity" data-scroll data-scroll-speed="1.5">
             </div>
             <p class="credit" id="credential-txt" data-scroll data-scroll-speed="1">Source: Ado x JR collaboration illustrations (modified with AI)</p>
         </div>
@@ -48,11 +50,11 @@
         </div>
         <article id="slider-container">
             <div id="slider">
-                <div class="slide" id="slide1"><img src="assets/images/slide_1_pro.avif" alt="Slide 1"></div>
-                <div class="slide" id="slide2"><img src="assets/images/slide_2_pro.avif" alt="Slide 2"></div>
-                <div class="slide" id="slide3"><img src="assets/images/slide_3_pro.avif" alt="Slide 3"></div>
-                <div class="slide" id="slide4"><img src="assets/images/slide_4_pro.avif" alt="Slide 4"></div>
-                <div class="slide" id="slide5"><img src="assets/images/slide_5_pro.avif" alt="Slide 5"></div>
+                <div class="slide" id="slide1"><img src="assets/images/slider/slide_1_pro.avif" alt="Slide 1"></div>
+                <div class="slide" id="slide2"><img src="assets/images/slider/slide_2_pro.avif" alt="Slide 2"></div>
+                <div class="slide" id="slide3"><img src="assets/images/slider/slide_3_pro.avif" alt="Slide 3"></div>
+                <div class="slide" id="slide4"><img src="assets/images/slider/slide_4_pro.avif" alt="Slide 4"></div>
+                <div class="slide" id="slide5"><img src="assets/images/slider/slide_5_pro.avif" alt="Slide 5"></div>
             </div>
             <div class="navigation">
                 <button class="nav-button" onclick="goToSlide(0)"> </button>
@@ -91,9 +93,9 @@
         <div class="footer-container">
             <div class="socials-container">
                 <ul class="socials">
-                    <li class="social" id="discord"><a href="#"><img src="assets/images/discord.svg" alt="Discord Logo"></a></li>
-                    <li class="social" id="insta"><a href="#"><img src="assets/images/instagram.svg" alt="Instagram Logo"></a></li>
-                    <li class="social" id="github"><a href="#"><img src="assets/images/github.svg" alt="Github Logo"></a></li>
+                    <li class="social" id="discord"><a href="#"><img src="assets/images/socials/discord.svg" alt="Discord Logo"></a></li>
+                    <li class="social" id="insta"><a href="#"><img src="assets/images/socials/instagram.svg" alt="Instagram Logo"></a></li>
+                    <li class="social" id="github"><a href="#"><img src="assets/images/socials/github.svg" alt="Github Logo"></a></li>
                 </ul>
             </div>
             <div class="legals-container">
@@ -110,8 +112,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="js/index/parallax.js"></script>
-    <script src="js/index/slider.js" async></script>
-    <script src="js/index/faq.js" async></script>
+    <script src="assets/js/index/parallax.js"></script>
+    <script src="assets/js/index/slider.js" async></script>
+    <script src="assets/js/index/faq.js" async></script>
 </body>
 </html>
