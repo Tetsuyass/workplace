@@ -56,8 +56,8 @@ try {
 
 ?>
 <div class="wrap">
-    <h1>Votre message a bien été envoyé.</h1>
-    <h2>Je vous répondrais dès que possible !</h2>
+    <h1>Your message has been sent.</h1>
+    <h2>I'll get back to you as soon as possible :).</h2>
     <a href="../index.html"><button class="redirection">Redirection</button></a>
 </div>
 <style>
