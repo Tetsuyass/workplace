@@ -1,0 +1,16 @@
+{
+  "name": "tetsuya/workplace",
+  "description": "Site Web pour gérer plugins",
+  "type": "project",
+  "require": {
+    "phpmailer/phpmailer": "^6.10"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tetsuya",
+      "email": "tetsuyaworkplace@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}
